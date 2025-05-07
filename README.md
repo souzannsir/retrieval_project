@@ -12,8 +12,8 @@ The system improves legal text retrieval by:
 
 ## Prerequisites
 
-• Python 3.9
-• Conda (for environment management management)
+• Python 3.9 
+• Conda (for environment management management) 
 • Postman (for API testing)
 
 ## Installation
