@@ -1,35 +1,85 @@
-⚖️ Legal Text Retrieval Project Using Automated Segmentation and Multidimensional Embedding
-This project aims to improve the accuracy and effectiveness of legal information retrieval by segmenting texts into meaningful chunks (Dynamic Text Segmentation) and using multidimensional text representations (Multidimensional Embeddings) using the multilingual-e5-large model.
+# ⚖️ Legal Text Retrieval Project Using Automated Segmentation and Multidimensional Embedding
 
-The FAISS library was used to build an effective retrieval database based on 909 legal articles, and the system achieved a precision of 0.74.
+This project implements an advanced legal information retrieval system that enhances search accuracy through Dynamic Text Segmentation and Multidimensional Embeddings, leveraging the multilingual-e5-large model. The system achieves a precision rate of 0.74 across 909 legal articles using FAISS (Facebook AI Similarity Search) for efficient vector similarity search.
 
+## Project Overview
 
-Step 1. create conda environmrnt with python version 3.9 using this command
-`conda create -n retriver python==3.9 -y`
+The system improves legal text retrieval by:
+1. Segmenting legal documents into meaningful semantic chunks
+2. Creating multidimensional text representations using state-of-the-art embedding techniques
+3. Building an efficient retrieval database with FAISS indexing
+4. Providing a REST API interface for query processing
 
-Step 2. activate retriver environment
-`conda activate retriver `
+## Prerequisites
 
-Step 3.  download the multilingual-e5-large model from Hugging Face 
-`models/multilingual-e5-large/`
+• Python 3.9
+• Conda (for environment management management)
+• Postman (for API testing)
 
-Step 4. install requirements
-`pip install -r requirements.txt`
+## Installation
 
-indexing data file
-`python indexing.py`
+**Step 1: Create and Activate Conda Environment**
 
-run application 
-`python app.py`
+```bash
+# Create a new conda environment with python 3.9
+conda create -n retriever python==3.9 -y
 
-install postman in your pc
+# Activate the Environment
+conda activate retriever
+```
 
-try this curl 
+**Step 2: Download Required Model**
 
-`curl --location 'http://localhost:5050/api/v01/retrive' \
+```bash
+# Download the multilingual-e5-large model from Hugging Face
+https://huggingface.co/models/multilingual-e5-large/
+```
+
+**Step 3: Install Dependencies**
+
+```bash
+# Install all required packages
+pip install -r requirements.txt
+```
+
+**Indexing the Data**
+
+```bash
+# To build the initial search index
+python indexing.py
+```
+
+## Running the Application
+
+**Start the Retrieval Service**
+
+```bash
+# Start the retrieval service
+python app.py
+```
+
+## API Documentation
+
+The system exposes a REST API that can be accessed for text retrieval queries.
+
+**Example API Call**
+
+Using cURL:
+
+```bash
+curl --location 'http://localhost:5050/api/v01/retrive' \
 --header 'Content-Type: application/json' \
 --data '{
     "texts": "ماحكم الاستقالة ولمن تعطى؟"
-}'`
+}'
+```
 
-Open source project — for academic and educational use only.
+You can also test the API using Postman with the above endpoint and payload.
+
+## License
+
+Open source project - for academic and educational use only.
+
+## Performance
+
+The current implementation achieves a precision of 0.74 on a datatset consisting of 909 legal articles, demonstrating the effectiveness of combining dynamic text segmentation with multidimensional embeddings for legal information retrieval.
