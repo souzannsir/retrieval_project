@@ -1,6 +1,6 @@
 # ⚖️ Legal Text Retrieval Project Using Automated Segmentation and Multidimensional Embedding
 
-This project implements an advanced legal information retrieval system that enhances search accuracy through Dynamic Text Segmentation and Multidimensional Embeddings, leveraging the multilingual-e5-large model. The system achieves a precision rate of 0.74 across 909 legal articles using FAISS (Facebook AI Similarity Search) for efficient vector similarity search.
+This project implements an advanced legal information retrieval system that enhances search accuracy through Dynamic Text Segmentation and Multidimensional Embeddings, leveraging the multilingual-e5-large model. The system achieves a precision rate of 0.74, a recall rate of 0.89, and an F1-score of 0.81 across 909 legal articles, utilizing FAISS (Facebook AI Similarity Search) for efficient vector similarity search.
 
 ## Project Overview
 
@@ -22,10 +22,10 @@ The system improves legal text retrieval by:
 
 ```bash
 # Create a new conda environment with python 3.9
-conda create -n retriever python==3.9 -y
+conda create -n retriver python==3.9 -y
 
 # Activate the Environment
-conda activate retriever
+conda activate retriver
 ```
 
 **Step 2: Download Required Model**
